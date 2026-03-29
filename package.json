@@ -1,0 +1,29 @@
+{
+  "name": "playwright-swaglabs",
+  "version": "1.0.0",
+  "description": "Playwright POM framework for Swag Labs",
+  "main": "index.js",
+  "scripts": {
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=safari",
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:smoke": "npx playwright test --grep @smoke",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:negative": "npx playwright test --grep @negative",
+    "test:cart": "npx playwright test --grep @cart",
+    "test:checkout": "npx playwright test --grep @checkout",
+    "report": "npx playwright show-report",
+    "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "allure:open": "allure open ./allure-report",
+    "allure:serve": "allure serve ./allure-results",
+    "test:allure": "npx playwright test && allure generate ./allure-results --clean -o ./allure-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "allure-playwright": "^3.6.0"
+  }
+}
