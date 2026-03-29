@@ -60,7 +60,7 @@ playwright-swaglabs/
 
 ```bash
 git clone https://github.com/dilarakstk/playwright-swaglabs-tests.git
-cd playwright-swaglabs
+cd playwright-swaglabs-tests
 ```
 
 ### 2) Install dependencies
