@@ -5,7 +5,7 @@ const CartPage = require('../../pages/CartPage');
 const CheckoutPage = require('../../pages/CheckoutPage');
 const MenuPage = require('../../pages/MenuPage');
 const { validUser, checkoutInfo } = require('../../utils/testData');
-
+require('../hooks/testHooks');
 test.describe('Checkout Tests', () => {
 
   test('@e2e @checkout @regression User should complete checkout successfully', async ({ page }) => {

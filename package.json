@@ -13,6 +13,7 @@
     "test:smoke": "npx playwright test --grep @smoke",
     "test:regression": "npx playwright test --grep @regression",
     "test:negative": "npx playwright test --grep @negative",
+    "test:validLogin": "npx playwright test --grep @validLogin",
     "test:cart": "npx playwright test --grep @cart",
     "test:checkout": "npx playwright test --grep @checkout",
     "report": "npx playwright show-report",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0",
+    "allure-js-commons": "^3.6.0",
     "allure-playwright": "^3.6.0"
   }
 }

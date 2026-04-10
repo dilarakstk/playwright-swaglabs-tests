@@ -3,7 +3,7 @@ const LoginPage = require('../../pages/LoginPage');
 const InventoryPage = require('../../pages/InventoryPage');
 const CartPage = require('../../pages/CartPage');
 const { validUser } = require('../../utils/testData');
-
+require('../hooks/testHooks');
 test.describe('Cart Tests', () => {
 
   test('@smoke @cart @regression User should add product to cart successfully', async ({ page }) => {

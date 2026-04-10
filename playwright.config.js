@@ -6,7 +6,8 @@ module.exports = defineConfig({
   expect: {
     timeout: 10000,
   },
-  fullyParallel: true,
+  fullyParallel: false,
+  workers: 1,
   retries: 0,
   reporter: [
     ['list'],
@@ -14,14 +15,24 @@ module.exports = defineConfig({
     ['allure-playwright']
   ],
   use: {
-    baseURL: 'https://www.saucedemo.com',
-    headless: false,
-    viewport: { width: 1440, height: 900 },
-    actionTimeout: 10000,
-    navigationTimeout: 15000,
-    screenshot: 'only-on-failure',
+    
     video: 'retain-on-failure',
     trace: 'on-first-retry',
+  
+  baseURL: 'https://www.saucedemo.com',
+  headless: false,
+  viewport: { width: 1440, height: 900 },
+  actionTimeout: 10000,
+  navigationTimeout: 15000,
+
+  screenshot: 'on',
+  video: 'on',
+  trace: 'on',
+
+  launchOptions: {
+    slowMo: 500
+  }
+
   },
   projects: [
     {
@@ -31,7 +42,12 @@ module.exports = defineConfig({
         viewport: { width: 1440, height: 900 },
        },
     },
-    {
+    {baseURL: 'https://www.saucedemo.com',
+    headless: false,
+    viewport: { width: 1440, height: 900 },
+    actionTimeout: 10000,
+    navigationTimeout: 15000,
+    screenshot: 'on',
       name: 'firefox',
       use: { ...devices['Desktop Firefox'],
         browserName: 'firefox',
